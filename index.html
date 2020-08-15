@@ -1,0 +1,44 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="action.js" type="text/javascript"></script> 
+</head>
+<body>
+    <div class="main">
+        <p>
+            Next: <br>
+        </p>
+        <p id="list">
+        </p>
+    </div>
+    <div class="input">
+        <input id="text-input" type="text">
+        <input class="button" id="button-input" type="button" value="next" onclick="add()">
+        <input class="button" id="button-pop" type="button" value="pop" onclick="pop()">
+    </div>
+</body>
+
+<script>
+    function animateBg(i) {
+        document.body.style.backgroundColor = 'hsl(' + i + ', 100%, 50%)';
+    
+        setTimeout(function() {
+            animateBg(++i)
+        }, i);
+    }
+    animateBg(5);
+
+    function add() {
+        const currentList = document.getElementById('list').innerHTML;
+        const next = document.getElementById('text-input').value + ", ";
+        document.getElementById('list').innerHTML = currentList + next;
+        document.getElementById('text-input').value = "";
+    }
+
+    function pop() {
+        const currentList = document.getElementById('list').innerHTML;
+        const index = currentList.indexOf(" ") + 1;
+        const newList = currentList.slice(index);
+        document.getElementById('list').innerHTML = newList;
+    }
+</script>
