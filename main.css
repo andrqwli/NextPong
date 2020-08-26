@@ -18,15 +18,27 @@
   position: fixed;
   bottom: 50px;
   right: 50px;
+  color: white;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
 
-.input #input-text {
-  width: 150px;
+.input #text-input {
+  width: 250px;
   background-color: transparent;
-  border: none;
-  border: none;
+  border: 1px solid white;
+  padding: .5em .25em .5em .25em;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  outline: none;
 }
 
 .input .button {
   width: 50px;
+  border-radius: 4px;
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }

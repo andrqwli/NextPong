@@ -1,7 +1,6 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <script src="action.js" type="text/javascript"></script> 
 </head>
 <body>
     <div class="main">
@@ -12,6 +11,7 @@
         </p>
     </div>
     <div class="input">
+        Enter Team Name:
         <input id="text-input" type="text">
         <input class="button" id="button-input" type="button" value="next" onclick="add()">
         <input class="button" id="button-pop" type="button" value="pop" onclick="pop()">
@@ -37,7 +37,7 @@
 
     function pop() {
         const currentList = document.getElementById('list').innerHTML;
-        const index = currentList.indexOf(" ") + 1;
+        const index = currentList.indexOf(",") + 1;
         const newList = currentList.slice(index);
         document.getElementById('list').innerHTML = newList;
     }
